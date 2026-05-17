@@ -66,16 +66,18 @@ button{font-family:inherit;border:0;background:transparent;cursor:pointer;color:
 }
 
 /* ============================================================
-   FV — PC: 送付画像をそのまま使用 / Mobile: 専用レイアウト
+   FV — PC: 送付画像 / SP: 送付画像そのまま
 ============================================================ */
 .fv{position:relative;background:#fff;overflow:hidden}
-.fv-pc{display:block;padding:30px 0 30px;background:#fff}
+.fv-pc{display:block;padding:30px 0 0;background:#fff}
 .fv-pc img{display:block;width:100%;max-width:1672px;height:auto;margin:0 auto}
-.fv-mb{display:none}
+.fv-mb{display:none;flex-direction:column}
+.fv-mb img{display:block;width:100%;height:auto}
+.fv-mb-line-btn{display:flex;align-items:center;justify-content:center;background:#06C755;color:#fff;font-size:15px;font-weight:700;letter-spacing:.06em;padding:18px 20px;text-align:center;animation:line-glow 2.4s ease-in-out infinite}
 
 @media (max-width:880px){
   .fv-pc{display:none}
-  .fv-mb{display:block;padding:24px 0 36px;background:#fff}
+  .fv-mb{display:flex}
 }
 
 /* ===== Mobile FV interior ===== */
@@ -542,3 +544,49 @@ section{padding:80px 0;position:relative}
 
 /* anchor offset for sticky bar */
 section[id]{scroll-margin-top:120px}
+
+/* ============================================================
+   TRUST BAR
+============================================================ */
+.trust-bar{background:var(--ink);padding:14px 0}
+.trust-bar__inner{display:flex;align-items:center;justify-content:center;gap:0;flex-wrap:nowrap}
+.trust-bar__item{display:flex;flex-direction:column;align-items:center;padding:0 28px;gap:2px}
+.trust-bar__num{font-family:"Inter",sans-serif;font-weight:700;font-size:20px;color:var(--orange);line-height:1}
+.trust-bar__num small{font-size:11px;font-weight:500}
+.trust-bar__label{font-size:10px;color:rgba(255,255,255,.6);letter-spacing:.06em;white-space:nowrap}
+.trust-bar__sep{width:1px;height:32px;background:rgba(255,255,255,.12);flex-shrink:0}
+@media(max-width:600px){
+  .trust-bar__item{padding:0 14px}
+  .trust-bar__num{font-size:16px}
+  .trust-bar__label{font-size:9px}
+}
+
+/* ============================================================
+   DOCTOR QUOTE STRIP
+============================================================ */
+.dr-quote-strip{display:flex;gap:20px;align-items:center;background:var(--cream);border:1px solid var(--line);padding:22px 28px;margin-bottom:48px}
+.dr-quote-strip__img{width:72px;height:72px;border-radius:50%;object-fit:cover;object-position:50% 15%;flex-shrink:0}
+.dr-quote-strip__text{font-family:"Noto Serif JP",serif;font-size:14px;line-height:1.85;color:var(--ink-2);margin:0 0 8px}
+.dr-quote-strip__name{font-size:12px;color:var(--mute);letter-spacing:.06em}
+.dr-quote-strip__name strong{color:var(--ink);font-weight:600}
+@media(max-width:720px){
+  .dr-quote-strip{padding:16px 18px;gap:14px}
+  .dr-quote-strip__img{width:56px;height:56px}
+  .dr-quote-strip__text{font-size:13px}
+}
+
+/* ============================================================
+   ISSUE CTA / CASES CTA / FLOW CTA
+============================================================ */
+.issue-cta,.cases-cta{text-align:center;margin-top:40px;padding:32px;background:var(--warmgray);border:1px solid var(--line)}
+.issue-cta p,.cases-cta p{font-family:"Noto Serif JP",serif;font-size:15px;color:var(--ink);margin:0 0 20px;line-height:1.85}
+.soft-note{display:block;font-size:11px;color:var(--mute);margin-top:10px;letter-spacing:.04em}
+
+.flow-cta{text-align:center;margin-top:40px;padding-top:32px;border-top:1px solid var(--line)}
+.flow-cta p{font-size:14px;color:var(--mute);margin:0 0 16px}
+.flow-cta__btn{display:inline-flex;align-items:center;border:1.5px solid var(--orange-deep);color:var(--orange-deep);padding:14px 28px;border-radius:999px;font-size:14px;font-weight:600;letter-spacing:.04em;transition:.2s}
+.flow-cta__btn:hover{background:var(--orange-deep);color:#fff}
+@media(max-width:720px){
+  .issue-cta,.cases-cta{padding:24px 18px}
+  .issue-cta p,.cases-cta p{font-size:14px}
+}
