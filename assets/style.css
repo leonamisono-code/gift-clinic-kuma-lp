@@ -50,9 +50,8 @@ button{font-family:inherit;border:0;background:transparent;cursor:pointer;color:
 /* ============ header ============ */
 .hd{position:sticky;top:0;left:0;right:0;z-index:40;background:rgba(255,255,255,.92);backdrop-filter:saturate(140%) blur(8px);-webkit-backdrop-filter:saturate(140%) blur(8px);border-bottom:1px solid rgba(232,225,214,.6)}
 .hd-row{display:flex;justify-content:space-between;align-items:center;padding:14px 0}
-.brand{display:inline-flex;align-items:center;gap:10px;white-space:nowrap}
-.brand .brand-mark{display:block;height:36px;width:auto}
-.brand .brand-text{font-family:"Cormorant Garamond",serif;font-weight:400;font-style:normal;font-size:22px;letter-spacing:.16em;color:var(--ink);line-height:1}
+.brand{display:inline-flex;align-items:center;white-space:nowrap}
+.brand .brand-logo{display:block;height:38px;width:auto}
 .hd-cta{display:flex;gap:14px;align-items:center;flex-shrink:0}
 .hd-cta .tel{font-family:"Inter",sans-serif;font-weight:600;font-size:14px;letter-spacing:.04em;color:var(--ink);white-space:nowrap;line-height:1}
 .hd-cta .tel span{font-size:11px;color:var(--mute);margin-right:6px;letter-spacing:.1em}
@@ -61,15 +60,14 @@ button{font-family:inherit;border:0;background:transparent;cursor:pointer;color:
   .hd-row{padding:10px 0}
   .hd-cta .tel{display:none}
   .hd-cta .line{padding:8px 14px;font-size:12px}
-  .brand .brand-mark{height:26px}
-  .brand .brand-text{font-size:17px;letter-spacing:.14em}
+  .brand .brand-logo{height:28px}
 }
 
 /* ============================================================
    FV — PC: 送付画像 / SP: 送付画像そのまま
 ============================================================ */
 .fv{position:relative;background:#fff;overflow:hidden}
-.fv-pc{display:block;padding:30px 0 0;background:#fff}
+.fv-pc{display:block;padding:0;background:#fff}
 .fv-pc img{display:block;width:100%;max-width:1672px;height:auto;margin:0 auto}
 .fv-mb{display:none;flex-direction:column}
 .fv-mb img{display:block;width:100%;height:auto}
@@ -257,7 +255,7 @@ section{padding:80px 0;position:relative}
 .offer-inner{position:relative;display:grid;grid-template-columns:1fr auto;gap:48px;align-items:center}
 .offer-left .eyebrow{color:var(--orange);font-family:"Inter",sans-serif;font-weight:600;font-size:11px;letter-spacing:.4em;margin-bottom:18px}
 .offer-left h2{font-family:"Noto Serif JP",serif;font-size:34px;line-height:1.5;margin:0 0 16px;font-weight:500;letter-spacing:.04em}
-.offer-left h2 .num{color:var(--orange);font-family:"Cormorant Garamond",serif;font-style:italic;font-size:60px;font-weight:600;vertical-align:-8px;margin:0 4px;line-height:1}
+.offer-left h2 .num{color:#fff;font-family:"Inter",sans-serif;font-style:normal;font-size:56px;font-weight:800;vertical-align:-6px;margin:0 4px;line-height:1;background:var(--orange);padding:0 6px;border-radius:4px}
 .offer-left h2 .em{color:var(--orange)}
 .offer-left p{font-size:14px;line-height:2;color:rgba(255,255,255,.65);margin:0;max-width:560px;letter-spacing:.03em}
 
